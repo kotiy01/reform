@@ -1,8 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from "react-native";
-import { PracticsNav } from "../CustomNavigation";
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
     return (
         <View style={styles.mainContainer}>
             <ImageBackground source={require('../img/bgImg.jpg')} resizeMode="cover" style={styles.bgImg}>
@@ -10,10 +9,10 @@ const Home = ({navigation}) => {
                     <Text style={styles.mainText}>Добрый день{'\n'}USERNAME</Text>
                 </View>
                 <View style={styles.btnsBlock}>
-                    <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("PracticsNav")}>
+                    <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("Practics")}>
                         <Text style={styles.btnText}>Практика</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btn}>
+                    <TouchableOpacity style={styles.btn} onPress={()=>navigation.navigate("Dialogs")}>
                         <Text style={styles.btnText}>Диалог</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.btn}>

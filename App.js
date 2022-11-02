@@ -22,33 +22,32 @@
 
  import { NavigationContainer } from '@react-navigation/native';
  import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
- import Home from './screens/Home';
- import Account from './screens/Account';
- import Menu from './screens/Menu';
-
+ 
+ import { HomeNavigation, MenuNavigation, AccountNavigation } from "./CustomNavigation";
+ 
  const Tab = createBottomTabNavigator();
  
- const App: () => React$Node = () => {
+ const App = () => {
    return (
-     <>
       <NavigationContainer>
         <Tab.Navigator>
           <Tab.Screen 
             name="Home"
-            component={Home}
+            component={HomeNavigation}
             options={{headerShown: false}}
           />
           <Tab.Screen 
             name="Menu"
-            component={Menu}
+            component={MenuNavigation}
+            options={{headerShown: false}}
           />
           <Tab.Screen 
             name="Account"
-            component={Account}
+            component={AccountNavigation}
+            options={{headerShown: false}}
           />
         </Tab.Navigator>
       </NavigationContainer>
-     </>
    );
  };
  

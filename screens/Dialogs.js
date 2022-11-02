@@ -1,15 +1,15 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const Account = ({ navigation }) => {
+const Dialogs = ({ navigation }) => {
     return (
         <View>
-            <Text>Account</Text>
+            <Text>Dialogs</Text>
         </View>
     )
 }
 
-export default Account
+export default Dialogs
 
 const styles = StyleSheet.create ({
     
