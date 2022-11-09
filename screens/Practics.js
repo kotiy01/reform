@@ -1,20 +1,20 @@
 import React from "react";
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image } from "react-native";
 
-const Practics = () => {
+const Practics = ({ navigation }) => {
     return (
         <View style={styles.mainContainer}>
             <ImageBackground source={require('../img/bgImg.jpg')} resizeMode="cover" style={styles.bgImg}>
                 <Text style={styles.mainText}>Выберите {'\n'} практику</Text>
                 <View style={styles.btnsBlock}>
-                    <TouchableOpacity style={styles.btnBlock}>
+                    <TouchableOpacity style={styles.btnBlock} onPress={()=>navigation.navigate("Breath")}>
                         <View style={styles.iconBlock}>
                             <Image source={require('../img/icon_breath.png')} style={styles.iconImg}>
                             </Image>
                         </View>
                         <Text style={styles.btnText}>Дыхание</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnBlock}>
+                    <TouchableOpacity style={styles.btnBlock} onPress={()=>navigation.navigate("Meditation")}>
                         <View style={styles.iconBlock}>
                             <Image source={require('../img/icon_meditation.png')} style={styles.iconImg}>
                             </Image>

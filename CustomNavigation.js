@@ -6,6 +6,8 @@ import Practics from "./screens/Practics";
 import Menu from "./screens/Menu";
 import Account from "./screens/Account";
 import Dialogs from "./screens/Dialogs";
+import Breath from "./screens/Breath";
+import Meditation from "./screens/Meditation";
 
 const Stack = createStackNavigator()
 
@@ -27,6 +29,16 @@ const HomeNavigation = () => {
                 component={Dialogs}
                 options={{headerShown: false}}
             />
+            <Stack.Screen 
+                name="Breath"
+                component={Breath}
+                options={{headerShown: false}}
+            />
+            <Stack.Screen 
+                name="Meditation"
+                component={Meditation}
+                options={{headerShown: false}}
+            />
         </Stack.Navigator>
     )
 }
@@ -40,11 +52,7 @@ const MenuNavigation = () => {
                 component={Menu}    
                 options={{headerShown: false}}
             />
-            <Stack.Screen 
-                name="Practics"
-                component={Practics}    
-                options={{headerShown: false}}
-            />
+
         </Stack.Navigator>
     )
 }
@@ -58,11 +66,7 @@ const AccountNavigation = () => {
                 component={Account}
                 options={{headerShown: false}}
             />
-            <Stack.Screen 
-                name="Practics"
-                component={Practics}    
-                options={{headerShown: false}}
-            />
+
         </Stack.Navigator>
     )
 }
