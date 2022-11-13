@@ -8,6 +8,7 @@ import Account from "./screens/Account";
 import Dialogs from "./screens/Dialogs";
 import Breath from "./screens/Breath";
 import Meditation from "./screens/Meditation";
+import Settings from "./screens/Settings";
 
 const Stack = createStackNavigator()
 
@@ -66,7 +67,11 @@ const AccountNavigation = () => {
                 component={Account}
                 options={{headerShown: false}}
             />
-
+            <Stack.Screen
+                name="Settings"
+                component={Settings}
+                options={{headerShown: false}}
+            />
         </Stack.Navigator>
     )
 }
